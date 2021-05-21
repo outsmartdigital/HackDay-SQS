@@ -19,5 +19,3 @@ def processMessage(queueName):
 
             print('Hello, {0}!{1}'.format(message.body, author_text))
             message.delete()
-
-processMessage('hackday_test')
