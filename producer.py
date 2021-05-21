@@ -20,4 +20,3 @@ def sendMessage(queueName, message, autor):
     except: 
         return 'Erro: Não foi possível inserir a mensagem na fila'
     
-sendMessage('hackday_test', 'Apagar', 'Yas')
