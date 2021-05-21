@@ -2,12 +2,12 @@ import boto3
 
 sqs = boto3.resource('sqs')
 
-def sendMessage(queueName, message, autor):
+def sendMessage(queueName, message, author):
     queue = sqs.get_queue_by_name(QueueName=queueName)
 
     response = queue.send_message(MessageBody=message, MessageAttributes={
         'Author': {
-            'StringValue': autor,
+            'StringValue': author,
             'DataType': 'String'
         }
     })
